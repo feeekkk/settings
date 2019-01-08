@@ -1,0 +1,23 @@
+function cs()
+{
+  if [ $# -eq 0 ]; then
+    cd && ls
+  else
+    cd "$*" && ls
+  fi
+}
+
+#cd then ls
+alias cd='cs'
+
+alias gs='git status'
+alias gb='git branch'
+alias gc='git checkout'
+alias gd='git diff'
+alias gl='git log --graph --stat --decorate=short --format=short'
+alias oops='git commit --amend --no-edit'
+
+# add a new line after each command
+precmd() { print "" }
+
+source /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh
