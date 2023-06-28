@@ -9,6 +9,7 @@ function cs()
 
 #cd then ls
 alias cd='cs'
+alias ls='ls -la --color'
 
 alias gs='git status'
 alias gb='git branch'
